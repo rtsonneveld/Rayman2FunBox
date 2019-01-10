@@ -138,5 +138,10 @@ namespace Rayman2FunBox {
         {
             Environment.Exit(0);
         }
+
+        private void aboutButton_Click(object sender, RoutedEventArgs e)
+        {
+            new AboutWindow().ShowDialog();
+        }
     }
 }

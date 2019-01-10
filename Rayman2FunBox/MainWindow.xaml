@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rayman2FunBox"
         mc:Ignorable="d"
-        Title="Rayman 2 Fun Box by Robin" Height="140" Width="300" Closed="Window_Closed">
+        Title="Rayman 2 Fun Box by Robin" Height="140" Width="350.133" Closed="Window_Closed">
     <Grid>
         <CheckBox x:Name="chk_fpsmode" Content="FPS mode" Margin="10,10,0,0" VerticalAlignment="Top" Checked="chk_fpsmode_Checked" RenderTransformOrigin="0.5,0.5" Unchecked="chk_fpsmode_Unchecked" HorizontalAlignment="Left" Width="88">
             <CheckBox.RenderTransform>
@@ -39,6 +39,7 @@
         </CheckBox>
         <Slider x:Name="sensitivitySlider" Margin="0,8,9.6,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="181" Value="0.5" Maximum="1" LargeChange="0.2" SmallChange="0.05" TickFrequency="0.1" TickPlacement="BottomRight" ValueChanged="sensitivitySlider_ValueChanged"/>
         <Label x:Name="sensitivityLabel" HorizontalContentAlignment="Center" Content="Turn sensitivity" Margin="0,34,14.6,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="171"/>
+        <Button x:Name="aboutButton" Content="About" Margin="0,0,9.6,6.4" HorizontalAlignment="Right" Width="75" Height="19" VerticalAlignment="Bottom" Click="aboutButton_Click"/>
 
     </Grid>
 </Window>
