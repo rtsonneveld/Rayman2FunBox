@@ -120,6 +120,7 @@ namespace Rayman2FunBox
 
             while (w.fpsModeEnabled)
             {
+                objectTypes = Utils.ReadObjectTypes(processHandle);
 
                 int engineMode = Memory.ReadProcessMemoryByte(processHandle, 0x500380); // engineMode
 
@@ -133,6 +134,11 @@ namespace Rayman2FunBox
 
                 var activeSuperObjects = Utils.GetActiveSuperObjectNames(processHandle, objectTypes[2]);
                 var activeSuperObjectsAIModelNames = Utils.GetActiveSuperObjectAIModelNames(processHandle, objectTypes[1]);
+
+                if (activeSuperObjectsAIModelNames==null) {
+                    w.fpsModeEnabled = false;
+                    tempDisable = true;
+                }
 
                 levelTimer++;
 

@@ -165,7 +165,10 @@ namespace Rayman2FunBox {
             byte[] buffer = new byte[maxLength];
             Memory.ReadProcessMemory((int)processHandle, offset, buffer, buffer.Length, ref bytesReadOrWritten);
             string str = Encoding.ASCII.GetString(buffer);
-            str = str.Substring(0, str.IndexOf((char)0)); // remove after null terminator
+            if (str.IndexOf((char)0)>0)
+                str = str.Substring(0, str.IndexOf((char)0)); // remove after null terminator
+            else
+                str = "";
             return str;
         }
 
